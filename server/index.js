@@ -26,7 +26,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: JSON.parse(process.env.CORS_ORIGIN),
+    origin: JSON.parse(process.env.CORS_ORIGIN || '["http://localhost:3000"]'),
     credentials: true,
     maxAge: 14400,
   })
