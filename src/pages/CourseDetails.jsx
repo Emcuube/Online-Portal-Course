@@ -16,6 +16,7 @@ import {IoVideocamOutline} from 'react-icons/io5';
 import { addToCart } from '../slices/cartSlice';
 import { ACCOUNT_TYPE } from '../utils/constants';
 import {FaChevronDown} from 'react-icons/fa';
+import { enrollFreeCourse } from "../services/operations/studentFeaturesAPI";
 
 const CourseDetails = () => {
     const {token} = useSelector((state) => state.auth);
@@ -29,14 +30,17 @@ const CourseDetails = () => {
     const {cart}=useSelector((state)=>state.cart);
 
 
-    const handelPayment = () => {
-        if(token){
-            buyCourse(token,[courseId],user,navigate,dispatch);
-        }
-        else{
-            navigate('/login');
-        }
-    }
+
+const handelPayment = () => {
+  if (!token) {
+    return navigate("/login");
+  }
+
+  enrollFreeCourse(courseId, token, navigate);
+
+  
+};
+
 
     useEffect(() => {
         const getCourseDetails = async() => {
@@ -125,7 +129,7 @@ const CourseDetails = () => {
                             {ACCOUNT_TYPE.INSTRUCTOR !==user?.accountType &&
                             <>
                             {
-                                alreadyEnrolled ? <button onClick={()=>{navigate("/dashboard/enrolled-courses")}}  className='yellowButton'>Go to Course</button> : <button onClick={handelPayment} className='yellowButton'>Buy Now</button>
+                                alreadyEnrolled ? <button onClick={()=>{navigate("/dashboard/enrolled-courses")}}  className='yellowButton'>Go to Course</button> : <button onClick={handelPayment} className='yellowButton'>Enroll now</button>
                             }
                             {
                                 alreadyEnrolled ? (<div></div>) : 

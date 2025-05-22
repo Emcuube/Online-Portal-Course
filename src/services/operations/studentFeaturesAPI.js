@@ -142,3 +142,25 @@ async function verifypament (response,courses,token,navigate,dispatch,) {
 }
 
 
+
+const { ENROLL_FREE_COURSE_API } = studentEndpoints
+
+export const enrollFreeCourse = async (courseId, token, navigate) => {
+  const toastId = toast.loading("Enrolling in course...");
+  try {
+    const response = await apiConnector("POST", ENROLL_FREE_COURSE_API, { courseId }, {
+      Authorization: `Bearer ${token}`,
+    });
+
+    if (!response.data.success) {
+      throw new Error(response.data.message);
+    }
+
+    toast.success("Successfully enrolled in course!");
+    navigate("/dashboard/enrolled-courses");
+  } catch (error) {
+    console.log("ENROLL_FREE_COURSE_API ERROR", error);
+    toast.error("Enrollment failed");
+  }
+  toast.dismiss(toastId);
+}
