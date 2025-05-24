@@ -1,3 +1,6 @@
+﻿import { loginWithCognito } from "../../services/cognitoAuth";
+
+
 import React, { useState } from 'react'
 //import logo from "../../assets/Logo/Logo-Full-Light.png"
 import { Link, matchPath } from 'react-router-dom'
@@ -253,24 +256,34 @@ const NavBar = ({ setProgress }) => {
                             </Link>
                         )
                     }
-                    {
-                        token == null && (
-                            <Link to='/login' className='text-richblack-25' onClick={() => { dispatch(setProgress(100)) }} >
-                                <button className='rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[7px] text-richblack-100'>
-                                    Login
-                                </button>
-                            </Link>
-                        )
-                    }
-                    {
-                        token == null && (
-                            <Link to='/signup' className='text-richblack-25' onClick={() => { dispatch(setProgress(100)) }} >
-                                <button className='rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[7px] text-richblack-100' >
+                    {token == null && (
+                        <>
+                            {/* 1. Login with AWS */}
+                            <button
+                                onClick={() => {
+                                    dispatch(setProgress(100));
+                                    loginWithCognito();
+                                }}
+                                className='rounded-[8px] border border-yellow-300 bg-yellow-50 px-[12px] py-[7px] text-black hover:scale-95 transition-all duration-200'
+                            >
+                                Login with AWS
+                            </button>
+
+                            {/* 2. Signup */}
+                            <Link to='/signup' onClick={() => dispatch(setProgress(100))}>
+                                <button className='rounded-[8px] border border-yellow-300 bg-yellow-50 px-[12px] py-[7px] text-black hover:scale-95 transition-all duration-200'>
                                     Signup
                                 </button>
                             </Link>
-                        )
-                    }
+
+                            {/* 3. Login (ẩn theo style) */}
+                            <Link to='/login' onClick={() => dispatch(setProgress(100))}>
+                                <button className='bg-richblack-900 text-richblack-900 px-[12px] py-[7px] rounded-[8px] border border-richblack-900'>
+                                    Login
+                                </button>
+                            </Link>
+                        </>
+                    )}
                     {
                         token !== null && (
                             <div className=' pt-2' >
