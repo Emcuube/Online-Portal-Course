@@ -63,7 +63,7 @@ const CognitoCallbackHandler = () => {
     }, [dispatch, navigate]);
 
     return (
-        <div className="text-white p-5 text-center">
+        <div className="text-richblack-900 p-5 text-center">
             Logging you in...
         </div>
     );

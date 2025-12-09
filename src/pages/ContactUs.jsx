@@ -4,13 +4,13 @@ import ContactUsForm from "../Components/contactUs/ContactUsForm";
 const ContactUs = () => {
   return (
     <div>
-      <div className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-white lg:flex-row">
+      <div className="mx-auto mt-20 flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-900 lg:flex-row">
         <div className="lg:w-[80%]">
          
         </div>
         <div className="lg:w-[200%]">
-          <div className="border border-richblack-600 text-richblack-300 rounded-xl p-7 lg:p-14 flex gap-3 flex-col">
-            <h1 className="text-4xl leading-10 font-semibold text-richblack-5">
+          <div className="border border-richblack-600 text-richblack-900 rounded-xl p-7 lg:p-14 flex gap-3 flex-col bg-white">
+            <h1 className="text-4xl leading-10 font-semibold text-richblack-900">
               Contact us for any queries
             </h1>
           

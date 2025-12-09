@@ -12,7 +12,7 @@ import ContactFormSection from '../Components/core/AboutPage/ContactFormSection'
 
 const About = () => {
   return (
-    <div className='mx-auto text-white'>
+    <div className='mx-auto text-richblack-900'>
       {/* section 1 */}
       <section className='bg-richblack-700'>
         <div className='relative mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-center text-white'>
@@ -33,7 +33,7 @@ const About = () => {
       {/* section 2 */}
 
       <section className='border-b border-richblack-700'>
-        <div className='mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-500'>
+        <div className='mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-900'>
           <div className='h-[100px] '></div>
             <Quote/>
         </div>
@@ -43,14 +43,14 @@ const About = () => {
       {/* section 3 */}
 
       <section>
-        <div className='mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-500'>
+        <div className='mx-auto flex w-11/12 max-w-maxContent flex-col justify-between gap-10 text-richblack-900'>
             {/* foudning story wala div */}
             <div className='flex flex-col items-center gap-10 lg:flex-row justify-between '>
                 {/* founding story left box */}
                 <div className='my-24 flex lg:w-[50%] flex-col gap-10'>
                     <h1 className='bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#FCB045] bg-clip-text text-4xl font-semibold text-transparent lg:w-[70%] '>Our Founding Story</h1>
 
-                    <p className='text-base font-medium text-richblack-300 lg:w-[95%]'>Our e-learning platform was born out of a shared vision and passion for transforming education. It all began with a group of educators, technologists, and lifelong learners who recognized the need for accessible, flexible, and high-quality learning opportunities in a rapidly evolving digital world.</p>
+                    <p className='text-base font-medium text-richblack-900 lg:w-[95%]'>Our e-learning platform was born out of a shared vision and passion for transforming education. It all began with a group of educators, technologists, and lifelong learners who recognized the need for accessible, flexible, and high-quality learning opportunities in a rapidly evolving digital world.</p>
 
                    
                 </div>

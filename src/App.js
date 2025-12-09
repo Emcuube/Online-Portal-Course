@@ -44,20 +44,20 @@ function App() {
   const progress = useSelector((state) => state.loadingBar);
   const dispatch = useDispatch();
   return (
-    <div className=" w-screen min-h-screen bg-richblack-900 flex flex-col font-inter">
+    <div className="w-screen min-h-screen bg-gradient-to-b from-white via-richblue-5 to-blue-25 flex flex-col font-inter text-richblack-900">
       <LoadingBar
-        color="#FFD60A"
+        color="#1B96F3"
         height={1.4}
         progress={progress}
         onLoaderFinished={() => dispatch(setProgress(0))}
       />
       <NavBar setProgress={setProgress}></NavBar>
       {!navigator.onLine && (
-        <div className="bg-red-500 flex text-white text-center p-2 bg-richblack-300 justify-center gap-2 items-center">
+        <div className="bg-blue-25 flex text-richblack-900 text-center p-2 border border-blue-50 justify-center gap-2 items-center">
           <RiWifiOffLine size={22} />
           Please check your internet connection.
           <button
-            className="ml-2 bg-richblack-500 rounded-md p-1 px-2 text-white"
+            className="ml-2 bg-richblue-500 rounded-md p-1 px-2 text-white shadow-sm"
             onClick={() => window.location.reload()}
           >
             Retry

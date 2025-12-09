@@ -36,7 +36,7 @@ function LoginForm() {
       className="mt-6 flex w-full flex-col gap-y-4"
     >
       <label className="w-full">
-        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
           Email Address <sup className="text-pink-200">*</sup>
         </p>
         <input
@@ -49,11 +49,11 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+          className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
         />
       </label>
       <label className="relative">
-        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
           Password <sup className="text-pink-200">*</sup>
         </p>
         <input
@@ -66,27 +66,27 @@ function LoginForm() {
           style={{
             boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
           }}
-          className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+          className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] pr-12 text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
         />
         <span
           onClick={() => setShowPassword((prev) => !prev)}
           className="absolute right-3 top-[38px] z-[10] cursor-pointer"
         >
           {showPassword ? (
-            <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
+            <AiOutlineEyeInvisible fontSize={24} fill="#1E5987" />
           ) : (
-            <AiOutlineEye fontSize={24} fill="#AFB2BF" />
+            <AiOutlineEye fontSize={24} fill="#1E5987" />
           )}
         </span>
         <Link to="/forgot-password">
-          <p className="mt-1 ml-auto max-w-max text-xs text-blue-100">
+          <p className="mt-1 ml-auto max-w-max text-xs text-richblue-600">
             Forgot Password
           </p>
         </Link>
       </label>
       <button onClick={()=>{dispatch(setProgress(60))}}
         type="submit"
-        className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+          className="mt-6 rounded-[8px] bg-richblue-500 py-[8px] px-[12px] font-medium text-white shadow-md hover:scale-95 transition-all duration-200"
       >
         Sign In
       </button>

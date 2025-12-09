@@ -129,7 +129,7 @@ function SignupForm() {
       <form onSubmit={handleOnSubmit} className="flex w-full flex-col gap-y-4">
         <div className="flex gap-x-4">
           <label>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
               First Name <sup className="text-pink-200">*</sup>
             </p>
             <input
@@ -142,11 +142,11 @@ function SignupForm() {
               style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+              className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
             />
           </label>
           <label>
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
               Last Name <sup className="text-pink-200"></sup>
             </p>
             <input
@@ -158,12 +158,12 @@ function SignupForm() {
               style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+              className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
             />
           </label>
         </div>
         <label className="w-full">
-          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+          <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
             Email Address <sup className="text-pink-200">*</sup>
           </p>
           <input
@@ -176,12 +176,12 @@ function SignupForm() {
             style={{
               boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
             }}
-            className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] text-richblack-5"
+            className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
           />
         </label>
         <div className="flex gap-x-4">
           <label className="relative">
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
               Create Password <sup className="text-pink-200">*</sup>
             </p>
             <input
@@ -194,21 +194,21 @@ function SignupForm() {
               style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-10 text-richblack-5"
+              className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] pr-10 text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
             />
             <span
               onClick={() => setShowPassword((prev) => !prev)}
               className="absolute right-3 top-[38px] z-[10] cursor-pointer"
             >
               {showPassword ? (
-                <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
+                <AiOutlineEyeInvisible fontSize={24} fill="#1E5987" />
               ) : (
-                <AiOutlineEye fontSize={24} fill="#AFB2BF" />
+                <AiOutlineEye fontSize={24} fill="#1E5987" />
               )}
             </span>
           </label>
           <label className="relative">
-            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+            <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
               Confirm Password <sup className="text-pink-200">*</sup>
             </p>
             <input
@@ -221,23 +221,23 @@ function SignupForm() {
               style={{
                 boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
               }}
-              className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-10 text-richblack-5"
+              className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] pr-10 text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
             />
             <span
               onClick={() => setShowConfirmPassword((prev) => !prev)}
               className="absolute right-3 top-[38px] z-[10] cursor-pointer"
             >
               {showConfirmPassword ? (
-                <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />
+                <AiOutlineEyeInvisible fontSize={24} fill="#1E5987" />
               ) : (
-                <AiOutlineEye fontSize={24} fill="#AFB2BF" />
+                <AiOutlineEye fontSize={24} fill="#1E5987" />
               )}
             </span>
           </label>
         </div>
         <button
           type="submit" onClick={()=>{dispatch(setProgress(60))}}
-          className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+          className="mt-6 rounded-[8px] bg-richblue-500 py-[8px] px-[12px] font-medium text-white shadow-md hover:scale-95 transition-all duration-200"
         >
           Create Account
         </button>

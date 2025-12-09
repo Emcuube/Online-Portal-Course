@@ -52,10 +52,10 @@ const ResetPassword = () => {
         <div class="custom-loader"></div>
       ) : (
         <div className='max-w-[500px] p-4 lg:p-8 '>
-          <h1 className='text-[1.875rem] font-semibold leading-[2.375rem] text-richblack-5'>
+          <h1 className='text-[1.875rem] font-semibold leading-[2.375rem] text-richblack-900'>
             {!resetComplete ? "Choose a new password" : "Reset complete!"}
           </h1>
-          <p className='my-4 text-[1.125rem] leading-[1.625rem] text-richblack-100'>
+          <p className='my-4 text-[1.125rem] leading-[1.625rem] text-richblack-700'>
             {!resetComplete
               ? "Almost done. Enter your new password and you're all set."
               : `All done! We have sent an email to ${"nn"} to confirm`}
@@ -65,7 +65,7 @@ const ResetPassword = () => {
               <div>
                 <div className='relative mt-4'>
                   <label class="w-full">
-                    <p class="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+                    <p class="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
                       New Password
                       <sup class="text-pink-200">*</sup>
                     </p>
@@ -79,7 +79,7 @@ const ResetPassword = () => {
                       style={{
                         boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
                       }}
-                      className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+                      className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] pr-12 text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
                     />
                   </label>
                   <span
@@ -87,15 +87,15 @@ const ResetPassword = () => {
                     className="absolute right-3 top-9 z-[10] cursor-pointer"
                   >
                     {showPassword ? (
-                      <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" color="white" className='' />
+                      <AiOutlineEyeInvisible fontSize={24} fill="#1E5987" color="#1E5987" className='' />
                     ) : (
-                      <AiOutlineEye fontSize={24} fill="#AFB2BF" color="white" />
+                      <AiOutlineEye fontSize={24} fill="#1E5987" color="#1E5987" />
                     )}
                   </span>
                 </div>
                 <div className='relative mt-4'>
                   <label class="w-full">
-                    <p class="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+                    <p class="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-800">
                       Confirm New Password
                       <sup class="text-pink-200">*</sup>
                     </p>
@@ -109,7 +109,7 @@ const ResetPassword = () => {
                       style={{
                         boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
                       }}
-                      className="w-full rounded-[0.5rem] bg-richblack-800 p-[12px] pr-12 text-richblack-5"
+                      className="w-full rounded-[0.5rem] bg-white border border-blue-50 p-[12px] pr-12 text-richblack-900 shadow-sm focus:outline-none focus:ring-1 focus:ring-richblue-300"
                     />
                   </label>
                   <span
@@ -117,21 +117,21 @@ const ResetPassword = () => {
                     className="absolute right-3 top-10 z-[10] cursor-pointer"
                   >
                     {showConfirmPassword ? (
-                      <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" color="white" className='' />
+                      <AiOutlineEyeInvisible fontSize={24} fill="#1E5987" color="#1E5987" className='' />
                     ) : (
-                      <AiOutlineEye fontSize={24} fill="#AFB2BF" color="white" />
+                      <AiOutlineEye fontSize={24} fill="#1E5987" color="#1E5987" />
                     )}
                   </span>
                 </div>
               </div>
             )}
             {!resetComplete ? (
-              <button type='submit' className='mt-6 w-full rounded-[8px] bg-yellow-50 py-[12px] px-[12px] font-medium text-richblack-900'>
+              <button type='submit' className='mt-6 w-full rounded-[8px] bg-richblue-500 py-[12px] px-[12px] font-medium text-white shadow-md hover:scale-95 transition-all duration-200'>
                 Reset Password
               </button>
             ) : (
               <Link to={"/login"}>
-                <button className='mt-6 w-full rounded-[8px] bg-yellow-50 py-[12px] px-[12px] font-medium text-richblack-900'>
+                <button className='mt-6 w-full rounded-[8px] bg-richblue-500 py-[12px] px-[12px] font-medium text-white shadow-md hover:scale-95 transition-all duration-200'>
                   Return to login
                 </button>
               </Link>
@@ -140,7 +140,7 @@ const ResetPassword = () => {
 
           <div className='mt-6 flex items-center justify-between'>
             <Link to={"/login"}>
-              <p class="flex items-center gap-x-2 text-richblack-5">
+              <p class="flex items-center gap-x-2 text-richblue-600">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path>
                 </svg> Back To Login

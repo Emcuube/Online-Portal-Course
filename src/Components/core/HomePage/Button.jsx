@@ -7,7 +7,7 @@ const Button = ({children,active,linkto}) => {
     const dispatch = useDispatch();
   return (
     <Link onClick={()=>{dispatch(setProgress(100))}}  to={linkto}>
-    <div className={`text-center text-[13px] px-6 py-3 rounded-md font-semibold ${active ? "bg-yellow-50 text-black" : "bg-richblack-800"} hover:scale-95 transition-all duration-200`}>
+    <div className={`text-center text-[13px] px-6 py-3 rounded-md font-semibold ${active ? "bg-richblue-500 text-white shadow-md" : "bg-white text-richblack-800 border border-blue-50 shadow-sm"} hover:scale-95 transition-all duration-200`}>
         {children}
         </div>
         </Link>
